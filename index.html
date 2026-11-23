@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Routelle: delivery routes that plan themselves</title>
+<meta name="description" content="Routelle plans, dispatches and tracks local deliveries. Drivers drive less, customers wait less.">
+<meta property="og:title" content="Routelle: delivery routes that plan themselves">
+<meta property="og:description" content="Plan, dispatch and track local deliveries in one calm workspace.">
+<meta name="theme-color" content="#F4F2FF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="logo" href="#top" aria-label="Routelle home">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#3B2BFF"/><path d="M9 22c0-6 5-5 7-8s0-5 4-5" fill="none" stroke="#FFD23F" stroke-width="3" stroke-linecap="round"/><circle cx="9" cy="22" r="2.6" fill="#fff"/><circle cx="23" cy="9" r="2.6" fill="#fff"/></svg>
+    Routelle
+  </a>
+  <nav id="menu" aria-label="Main">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-sm" href="#demo">Book a demo</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="pill"><i></i>Now serving 1,200 local fleets</p>
+    <h1>Every stop, in the right order.</h1>
+    <p class="lead">Routelle plans, dispatches and tracks your deliveries, so your drivers drive less and your customers wait less.</p>
+    <div class="cta-row">
+      <a class="btn" href="#demo">Book a demo</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+    <p class="fine">14 days free. No card needed. Import your first orders in about five minutes.</p>
+  </div>
+
+  <div class="demo" aria-label="Live route preview">
+    <div class="demo-top"><span class="live"><i></i>Route 12 is live</span><span id="eta">Back at depot 12:40</span></div>
+    <svg id="map" viewBox="0 0 520 330" role="img" aria-label="Map with a courier moving along a planned route">
+      <rect width="520" height="330" fill="#ECE9FF"/>
+      <g fill="#fff">
+        <rect x="20" y="20" width="110" height="70" rx="10"/><rect x="150" y="20" width="90" height="70" rx="10"/><rect x="260" y="20" width="120" height="70" rx="10"/><rect x="400" y="20" width="100" height="70" rx="10"/>
+        <rect x="20" y="110" width="70" height="90" rx="10"/><rect x="110" y="110" width="130" height="90" rx="10"/><rect x="260" y="110" width="60" height="90" rx="10"/><rect x="340" y="110" width="160" height="90" rx="10"/>
+        <rect x="20" y="220" width="130" height="90" rx="10"/><rect x="170" y="220" width="100" height="90" rx="10"/><rect x="290" y="220" width="90" height="90" rx="10"/><rect x="400" y="220" width="100" height="90" rx="10"/>
+      </g>
+      <rect x="110" y="110" width="130" height="90" rx="10" fill="#C9F5E3"/>
+      <rect x="340" y="110" width="160" height="90" rx="10" fill="#DCD7FF"/>
+      <path id="route" d="M42 285 C100 275 110 215 190 210 S265 100 330 105 S440 175 478 58" fill="none" stroke="#C4BDFB" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 13"/>
+      <path id="done" d="M42 285 C100 275 110 215 190 210 S265 100 330 105 S440 175 478 58" fill="none" stroke="#3B2BFF" stroke-width="7" stroke-linecap="round"/>
+      <g id="pins"></g>
+      <g id="courier"><circle r="16" fill="#FFD23F" opacity=".45"/><circle r="9" fill="#FFD23F" stroke="#14123A" stroke-width="3"/></g>
+    </svg>
+    <ol class="stops" id="stops"></ol>
+  </div>
+</section>
+
+<section class="band" aria-label="Key numbers">
+  <p><strong>23%</strong> fewer kilometres on average</p>
+  <p><strong>4.8 / 5</strong> average customer delivery rating</p>
+  <p><strong>11 min</strong> from CSV upload to dispatched routes</p>
+</section>
+
+<section class="sec" id="features">
+  <div class="sec-head">
+    <h2>Built for the people who actually run the van.</h2>
+    <p>Dispatchers get speed. Drivers get clarity. Customers get a straight answer to “where is my order?”</p>
+  </div>
+
+  <div class="bento">
+    <article class="tile t-wide">
+      <div>
+        <h3>Routes in seconds, not Sunday evenings</h3>
+        <p>Drop in a spreadsheet or connect your shop. Routelle balances load, time windows and driver shifts, then proposes the plan. Change anything with a drag.</p>
+      </div>
+      <div class="compare">
+        <figure>
+          <svg viewBox="0 0 160 110" aria-hidden="true"><path d="M14 90 L120 20 L40 30 L140 88 L70 96 L132 40 L26 60 Z" fill="none" stroke="#B7B2E6" stroke-width="3" stroke-linejoin="round"/></svg>
+          <figcaption>By hand<b>148 km</b></figcaption>
+        </figure>
+        <figure class="good">
+          <svg viewBox="0 0 160 110" aria-hidden="true"><path d="M14 90 C40 90 40 60 66 60 S92 90 116 70 S130 30 146 20" fill="none" stroke="#3B2BFF" stroke-width="3.5" stroke-linecap="round"/><circle cx="14" cy="90" r="5" fill="#14123A"/><circle cx="146" cy="20" r="5" fill="#FFD23F" stroke="#14123A" stroke-width="2"/></svg>
+          <figcaption>With Routelle<b>114 km</b></figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tile t-sun">
+      <h3>Tracking links people open</h3>
+      <p>A live page with a name, a photo and a real time window. No app to install.</p>
+      <svg class="phone" viewBox="0 0 150 120" aria-hidden="true"><rect x="38" y="8" width="74" height="130" rx="14" fill="#14123A"/><rect x="43" y="14" width="64" height="118" rx="10" fill="#fff"/><rect x="50" y="24" width="38" height="6" rx="3" fill="#14123A"/><rect x="50" y="36" width="50" height="4" rx="2" fill="#B7B2E6"/><rect x="50" y="52" width="50" height="8" rx="4" fill="#ECE9FF"/><rect x="50" y="52" width="34" height="8" rx="4" fill="#3B2BFF"/><text x="50" y="76" font-size="8" font-family="DM Sans,sans-serif" font-weight="700" fill="#14123A">Arriving in 6 min</text></svg>
+    </article>
+
+    <article class="tile t-mint">
+      <h3>Proof of delivery</h3>
+      <p>Photo, signature or PIN. Stored with the order, searchable in a click.</p>
+      <svg class="sig" viewBox="0 0 220 70" aria-hidden="true"><path d="M8 48c18-34 26-34 22-6s14 10 22-8 10 20 26 6 14-26 30-14 12 22 30 8 22-8 36-14" fill="none" stroke="#14123A" stroke-width="3" stroke-linecap="round"/><path d="M8 60h204" stroke="#14123A" stroke-opacity=".25" stroke-width="2"/></svg>
+    </article>
+
+    <article class="tile t-wide t-ink">
+      <div>
+        <h3>Works when the signal doesn’t</h3>
+        <p>The driver app keeps your route, notes and scan history on the phone. Everything syncs the moment a bar of signal returns.</p>
+      </div>
+      <ul class="sync" aria-hidden="true">
+        <li><span class="ok"></span>Marta’s Bakery<em>Delivered</em></li>
+        <li><span class="ok"></span>Studio Nine<em>Delivered</em></li>
+        <li><span class="wait"></span>Harbor Books<em>Waiting for signal</em></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec how" id="how">
+  <div class="sec-head">
+    <h2>From a messy spreadsheet to a dispatched fleet.</h2>
+  </div>
+  <ol class="steps">
+    <li><span>1</span><h3>Bring your orders</h3><p>Upload a CSV, paste addresses or connect Shopify and WooCommerce. We clean and geocode them for you.</p></li>
+    <li><span>2</span><h3>Review the plan</h3><p>Routelle proposes routes by driver, vehicle and time window. Drag a stop to another van and watch the totals update.</p></li>
+    <li><span>3</span><h3>Send drivers out</h3><p>Each driver receives a route on their phone. Customers receive a tracking link. You watch it all on one screen.</p></li>
+  </ol>
+</section>
+
+<section class="sec voices" aria-label="Customer stories">
+  <blockquote>
+    <p>We used to lose two hours every morning on a whiteboard. Now the plan is ready before the coffee is.</p>
+    <footer>Amara Okafor, operations lead at Fresh Crate</footer>
+  </blockquote>
+  <blockquote>
+    <p>Customers stopped calling to ask where their flowers were. That alone paid for the subscription.</p>
+    <footer>Julien Marchetti, owner of Petale &amp; Fils</footer>
+  </blockquote>
+</section>
+
+<section class="sec" id="pricing">
+  <div class="sec-head center">
+    <h2>Simple pricing that grows with your fleet.</h2>
+    <div class="toggle" role="group" aria-label="Billing period">
+      <button class="on" data-mode="monthly" aria-pressed="true">Monthly</button>
+      <button data-mode="annual" aria-pressed="false">Yearly, 2 months free</button>
+    </div>
+  </div>
+  <div class="plans">
+    <article class="plan">
+      <h3>Solo</h3>
+      <p class="for">One driver, up to 60 stops a day.</p>
+      <p class="price"><b data-m="29" data-a="24">$29</b> <span>/ month</span></p>
+      <ul><li>Route optimisation</li><li>Driver app</li><li>Tracking links</li></ul>
+      <a class="btn btn-ghost" href="#demo">Start free</a>
+    </article>
+    <article class="plan hot">
+      <span class="badge">Most chosen</span>
+      <h3>Team</h3>
+      <p class="for">Up to 10 drivers and a shared dispatch board.</p>
+      <p class="price"><b data-m="89" data-a="74">$89</b> <span>/ month</span></p>
+      <ul><li>Everything in Solo</li><li>Proof of delivery</li><li>Time windows and shifts</li><li>Shopify and WooCommerce sync</li></ul>
+      <a class="btn" href="#demo">Start free</a>
+    </article>
+    <article class="plan">
+      <h3>Fleet</h3>
+      <p class="for">Larger operations with their own rules.</p>
+      <p class="price"><b>Custom</b></p>
+      <ul><li>Unlimited drivers</li><li>API and webhooks</li><li>Priority support</li></ul>
+      <a class="btn btn-ghost" href="#demo">Talk to us</a>
+    </article>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="sec-head"><h2>Questions we hear a lot.</h2></div>
+  <div class="faq-list">
+    <details open><summary>How long does setup take?</summary><p>Most teams are dispatching their first route the same afternoon. If you can export a spreadsheet, you can start.</p></details>
+    <details><summary>Do my drivers need a special phone?</summary><p>No. The driver app runs on any recent iPhone or Android phone and works in the browser as a fallback.</p></details>
+    <details><summary>Can customers choose a delivery window?</summary><p>Yes. Share a booking link or import windows with your orders. Routelle plans around them.</p></details>
+    <details><summary>What happens if I cancel?</summary><p>You can export every order, route and proof of delivery as CSV or PDF whenever you like.</p></details>
+  </div>
+</section>
+
+<section class="sec demo-sec" id="demo">
+  <div class="demo-box">
+    <div>
+      <h2>See your own routes in a 20-minute demo.</h2>
+      <p>Send us a sample of a typical day. We will plan it live and show you what changes.</p>
+    </div>
+    <form id="demoForm" class="form" data-endpoint="https://formspree.io/f/myewbejj" novalidate>
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Work email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Drivers on the road
+        <select name="fleet"><option>1 to 3</option><option>4 to 10</option><option>11 to 30</option><option>More than 30</option></select>
+      </label>
+      <label class="trap" aria-hidden="true">Leave empty<input name="botcheck" tabindex="-1" autocomplete="off"></label>
+      <button class="btn" type="submit">Book my demo</button>
+      <p class="msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <a class="logo" href="#top">Routelle</a>
+  <p>Routelle is a concept project. Names, figures and testimonials are fictional.</p>
+  <nav aria-label="Footer"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
